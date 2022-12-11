@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import SearchBar from './SearchBar';
+
+const API_KEY = process.env.REACT_APP_API_KEY
 
 function App() {
   const [data, setData] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // This function is called when the search term is updated
+  const handleSearchTermChange = newSearchTerm => {
+    setSearchTerm(newSearchTerm);
+  };
 
   // use the useEffect hook to fetch the data when the component is mounted
-  React.useEffect(() => {
+  useEffect(() => {
     async function fetchData() {
-      const response = await fetch('https://api.themoviedb.org/3/movie/550?api_key=863ac529838f0acd2cc9a88d6f58a5ef');
+      const response = await fetch(`https://api.themoviedb.org/3/movie/550?api_key=${API_KEY}`);
       const data = await response.json();
       setData(data);
     }
@@ -16,6 +25,10 @@ function App() {
 
   return (
     <div className="App">
+      <SearchBar
+        searchTerm={searchTerm}
+        onSearchTermChange={handleSearchTermChange}
+      />
       {data ? (
         <div>
           {/* display the data here */}
