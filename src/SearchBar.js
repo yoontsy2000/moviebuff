@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-
-const API_KEY = process.env.REACT_APP_API_KEY;
+import React, { useState, useRef } from 'react';
 
 function SearchBar({ setSearchResult }) {
   // Declare a new state variable for the search term
   const [searchTerm, setSearchTerm] = useState("");
+  const API_KEY = useRef(process.env.REACT_APP_API_KEY);
 
   // This function is called when the user clicks the search button
   const handleSearch = async () => {
