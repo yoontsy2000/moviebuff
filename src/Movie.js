@@ -7,12 +7,12 @@ function Movie(props) {
         <div class="container">
             <div class="Poster">
                 <img 
-                    src={"https://image.tmdb.org/t/p/w500/" + props.poster_path}
+                    src={"https://image.tmdb.org/t/p/w342/" + props.poster_path}
                     alt=""
                 />
             </div>
             <div class="Title">
-                <p>{props.title}</p>
+                <h1>{props.title}</h1>
             </div>
             <div class="Overview">
                 <p>{props.release_date}</p>

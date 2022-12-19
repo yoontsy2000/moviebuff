@@ -14,7 +14,7 @@ function App() {
       <SearchBar
         setSearchResult={setSearchResult}
       />
-      <div className="movies">
+      <div className="Movies">
         {searchResult && searchResult.length > 0 ? (
           searchResult.slice(0, 4).map(result => (
             <Movie 
@@ -26,7 +26,7 @@ function App() {
             )
           )
         ) : (
-          <div>Search!</div>
+          <div></div>
         )}
       </div>
     </div>
