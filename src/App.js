@@ -16,7 +16,7 @@ function App() {
       />
       <div className="Movies">
         {searchResult && searchResult.length > 0 ? (
-          searchResult.slice(0, 4).map(result => (
+          searchResult.map(result => (
             <Movie 
               title={result.title}
               overview={result.overview}

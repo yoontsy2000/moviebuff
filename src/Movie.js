@@ -6,7 +6,7 @@ function Movie(props) {
     return (
         <div class="container">
             <div class="Poster">
-                <img 
+                <img
                     src={"https://image.tmdb.org/t/p/w342/" + props.poster_path}
                     alt=""
                 />

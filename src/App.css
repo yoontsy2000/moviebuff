@@ -2,12 +2,14 @@
   text-align: center;
   background-color: #264653;
   min-height: 100vh;
-  padding: 40px 40px 20px 20px;
+  padding: 40px 20px 40px 20px;
 }
 
 .Movies {
-  display: flex;
-  padding: 8px 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(342px, 1fr));
+  grid-gap: 16px;
+  padding-top: 20px;
 }
 
 .Movie {
@@ -20,4 +22,16 @@
   max-width: 31.25rem;
   margin: 6rem auto;
   margin-bottom: 6rem;
+}
+
+@media (max-width: 800px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
 }
