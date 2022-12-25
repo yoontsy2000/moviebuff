@@ -2,15 +2,22 @@
   text-align: center;
   background-color: #264653;
   min-height: 100vh;
-  padding: 40px 40px 30px 30px;
+  padding: 40px 40px 20px 20px;
 }
 
 .Movies {
+  display: flex;
   padding: 8px 18px;
+}
+
+.Movie {
+  flex: auto;
+  min-width: 0;
 }
 
 .SearchBar {
   width: 100%;
   max-width: 31.25rem;
   margin: 6rem auto;
+  margin-bottom: 6rem;
 }

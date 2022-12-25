@@ -11,13 +11,13 @@ function Movie(props) {
                     alt=""
                 />
             </div>
-            <div class="Title">
+            {/* <div class="Title">
                 <h1>{props.title}</h1>
             </div>
             <div class="Overview">
                 <p>{props.release_date}</p>
                 <p>{props.overview}</p>
-            </div>
+            </div> */}
         </div>
     )
 }
