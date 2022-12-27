@@ -6,8 +6,7 @@ import Movie from './Movie';
 function App() {
   const [searchResult, setSearchResult] = useState([]);
 
-  // use the useEffect hook to fetch the data when the component is mounted
-  useEffect(() => {}, [searchResult]);
+  useEffect(() => {console.log("Ping!")}, [searchResult]);
 
   return (
     <div className="App">
@@ -17,7 +16,8 @@ function App() {
       <div className="Movies">
         {searchResult && searchResult.length > 0 ? (
           searchResult.map(result => (
-            <Movie 
+            <Movie
+              key={result.id}
               title={result.title}
               overview={result.overview}
               release_date={result.release_date}
@@ -25,7 +25,8 @@ function App() {
             />
             )
           )
-        ) : (
+        )
+        : (
           <div></div>
         )}
       </div>
