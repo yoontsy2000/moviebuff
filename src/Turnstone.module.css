@@ -39,6 +39,7 @@
   cursor: pointer;
   padding: 5px;
 }
+
 .highlightedItem {
   cursor: pointer;
   background-color: #deebe2;

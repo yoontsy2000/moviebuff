@@ -4,9 +4,9 @@ import SearchBar from './SearchBar';
 import Movie from './Movie';
 
 function App() {
-  const [searchResult, setSearchResult] = useState([]);
+  const [searchResult, setSearchResult] = useState({});
 
-  useEffect(() => {console.log("Ping!")}, [searchResult]);
+  useEffect(() => {console.log(searchResult)}, [searchResult]);
 
   return (
     <div className="App">
@@ -14,18 +14,15 @@ function App() {
         setSearchResult={setSearchResult}
       />
       <div className="Movies">
-        {searchResult && searchResult.length > 0 ? (
-          searchResult.map(result => (
+        {searchResult ? (
             <Movie
-              key={result.id}
-              title={result.title}
-              overview={result.overview}
-              release_date={result.release_date}
-              poster_path={result.poster_path}
+              key={searchResult.id}
+              title={searchResult.title}
+              overview={searchResult.overview}
+              release_date={searchResult.release_date}
+              poster_path={searchResult.poster_path}
             />
             )
-          )
-        )
         : (
           <div></div>
         )}
