@@ -15,15 +15,14 @@ function App() {
       />
       <div className="Movies">
         {searchResult ? (
-            <Movie
-              key={searchResult.id}
-              title={searchResult.title}
-              overview={searchResult.overview}
-              release_date={searchResult.release_date}
-              poster_path={searchResult.poster_path}
-            />
-            )
-        : (
+          <Movie
+            key={searchResult.id}
+            title={searchResult.title}
+            overview={searchResult.overview}
+            release_date={searchResult.release_date}
+            poster_path={searchResult.poster_path}
+          />
+        ) : (
           <div></div>
         )}
       </div>

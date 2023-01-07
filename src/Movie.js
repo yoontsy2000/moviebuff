@@ -10,10 +10,10 @@ function Movie(props) {
                     alt={props.title}
                 />
             </div>
-            <div class="Title">
+            <div className="Title">
                 <h1>{props.title}</h1>
             </div>
-            <div class="Overview">
+            <div className="Overview">
                 <p>{props.release_date}</p>
                 <p>{props.overview}</p>
             </div>

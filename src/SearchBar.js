@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Turnstone from 'turnstone';
 import styles from './Turnstone.module.css'
 import './SearchBar.css'
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function SearchBar({ setSearchResult }) {
-  // Declare a new state variable for the search term
 
   const Item = ({ item }) => {
     return (
@@ -39,6 +38,7 @@ function SearchBar({ setSearchResult }) {
         listbox={listbox}
         matchText={true}
         placeholder="Search a movie"
+        debounceWait
         styles={styles}
         onSelect={setSearchResult}
         Item={Item}

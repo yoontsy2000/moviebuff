@@ -6,9 +6,6 @@
 }
 
 .Movies {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(342px, 1fr));
-  grid-gap: 32px;
   padding-top: 20px;
 }
 
